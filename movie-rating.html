@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="movieName">
+        <input type="range" min="1" max="5" value="2" id="movieRatings">
+    </form>
+    <button>Submit</button>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $('button').on('click', function(){
+            movieName = $('#movieName').val();
+            movieRating = $('#movieRatings').val();
+            if(movieName == ""){
+                alert('MUST HAVE A MOVIE TITLE')
+            } else {
+                $('ul').append(`<li>${movieName}: ${movieRating} STARS</li>`)
+            }
+        })
+    </script>
+    <h1>Ratings!</h1>
+    <ul>
+
+    </ul>    
+</body>
+</html>
